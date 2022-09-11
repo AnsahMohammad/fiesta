@@ -34,7 +34,7 @@ def Shuff(t):
 
 def fetch(num,database):
     sol = Shuff(len(database))
-    return sol[num-1]
+    return sol[(num-1)%len(sol)]
 
 def work(database):
     k = int(input("which week data do you want ? "))
