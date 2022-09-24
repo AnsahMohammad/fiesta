@@ -1,5 +1,7 @@
 import streamlit as st
-st.title('Fiesta : Wear Unique !')
+
+st.subheader(" Entering your private Information in this Version is deprecated ! Thank You ! ")
+st.title('Fiesta : Wear Uniquely !')
 
 def Shuff(t):
     if(t%3!=0):
