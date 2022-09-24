@@ -1,4 +1,7 @@
 # Fiesta
+
+Visit the Application : <a href="https://ansahmohammad-fiesta-ui-ladk3u.streamlitapp.com/">Fiesta Live</a>
+
 A project which helps in reducing decesion making a person experience deciding what to wear
 
 will be using shuff() algorithm from researched R1.ipynb
