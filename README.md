@@ -7,5 +7,5 @@ This application will is web-based application which Shuffles the clothes a pers
 Made using Streamlit
 
 
-#contributors
+# contributors
 1) Mohammad Ansah
