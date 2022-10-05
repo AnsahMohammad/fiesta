@@ -6,6 +6,10 @@ st.title('Fiesta : Wear Uniquely !')
 def exit():
     st.error("Sorry an error occured")
 
+userName = st.sidebar.text_input("Enter your name : ")
+signing = st.sidebar.button("Sign-in")
+ 
+
 def Shuff(t):
     u_length = int(t/3)
     kernal_length = int(t/3) * 2
@@ -34,7 +38,7 @@ def Shuff(t):
 
 def fetch(num,database):
     sol = Shuff(len(database))
-    return sol[(num-1)%len(sol)]
+    return sol[int(num-1)%len(sol)]
 
 def work(database):
     k = st.number_input('Select a Week',1,100)
@@ -56,7 +60,7 @@ with tab2:
         st.write("Clothes Must be multiple of three for this Algorithm to work")
     k = st.button("Confirm")
     if(k):
-        f = open('data.txt','w')
+        f = open("{}dat.ami72".format(userName),'w')
         f.write(dress)
         f.close()
         dress = dress.split(',')
@@ -70,7 +74,7 @@ with tab2:
 database = {}
 with tab1:
     try:
-        f = open('data.txt','r')
+        f = open("{}dat.ami72".format(userName),'r')
     except:
         st.error("You have Not created a Wadrobe")
         st.write("Go to Wadrobe Tab to create One")
