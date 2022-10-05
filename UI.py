@@ -48,10 +48,15 @@ def work(database):
 tab1, tab2 = st.tabs(["Wadrobe","Edit the Wadrobe"])
 
 with tab2:
+    st.warning("Current database will erased after editing !")
     num = st.radio("Enter number of clothes : ",[3,6,9,12,15,18,21,24,27,30],0)
     if(num >= 6):
-        f = open('data.txt','w')
         dress = st.text_area("Feed in your clothes saperated by ',' :")
+    else:
+        st.write("Clothes Must be multiple of three for this Algorithm to work")
+    k = st.button("Confirm")
+    if(k):
+        f = open('data.txt','w')
         f.write(dress)
         f.close()
         dress = dress.split(',')
@@ -60,10 +65,6 @@ with tab2:
         for each in dress:
             database[j] = each
             j += 1
-    else:
-        st.write("Clothes Must be multiple of three for this Algorithm to work")
-    k = st.button("Confirm")
-    if(k):
         st.success('Added {} clothes to the Wadrobe ✅'.format(len(dress)))
 
 database = {}
