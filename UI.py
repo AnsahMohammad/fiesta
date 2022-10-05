@@ -1,16 +1,12 @@
 import streamlit as st
 
-st.subheader(" Entering your private Information in this Version is deprecated ! Thank You ! ")
+# st.subheader(" Entering your private Information in this Version is deprecated ! Thank You ! ")*************
 st.title('Fiesta : Wear Uniquely !')
 
 def exit():
     st.error("Sorry an error occured")
 
 def Shuff(t):
-    # if(t%3!=0):
-    #     print("Value Error")
-    #     exit()
-    # assuming t will always be multiple of 3 since we're using radio to choose number of clothes
     u_length = int(t/3)
     kernal_length = int(t/3) * 2
     solution = []
@@ -52,8 +48,8 @@ def work(database):
 tab1, tab2 = st.tabs(["Wadrobe","Edit the Wadrobe"])
 
 with tab2:
-    num = st.radio("Enter number of clothes : ",[6,9,12,15,18,21,24,27,30])
-    if(num%3==0):
+    num = st.radio("Enter number of clothes : ",[3,6,9,12,15,18,21,24,27,30],0)
+    if(num >= 6):
         f = open('data.txt','w')
         dress = st.text_area("Feed in your clothes saperated by ',' :")
         f.write(dress)
